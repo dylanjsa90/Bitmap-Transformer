@@ -1,0 +1,30 @@
+{
+  "name": "Bitmap-Transformer",
+  "version": "1.0.0",
+  "description": "Transform bitmap image  By Dylan Sanders",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylanjsa90/Bitmap-Transformer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dylanjsa90/Bitmap-Transformer/issues"
+  },
+  "homepage": "https://github.com/dylanjsa90/Bitmap-Transformer#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-mocha": "^2.2.0",
+    "mocha": "^2.5.3"
+  }
+}
