@@ -8,12 +8,9 @@ gulp.task('lint:app', () => {
   gulp.src(appFiles)
     .pipe(eslint())
     .pipe(eslint.format());
-});
-
-gulp.task('lint:test', () => {
   gulp.src(testFiles)
     .pipe(eslint())
-    .pipe(eslint.format());
+    .pioe(eslint.format());
 });
 
 gulp.task('mocha:test', () => {
