@@ -1,36 +1,29 @@
 const expect = require('chai').expect;
-const fs = require('fs');
-const transformer = require('../lib/transformer');
 var nonPalette = __dirname + '/non-palette-bitmap.bmp';
-
-describe('test the bitmap buffer', function() {
-  it('should check the size of the buffers', function() {
-    expect(size).to.eql(11078);
-    expect(bitmapWidth).to.eql(100);
-    expect(bitmapHeight).to.eql(100);
-    expect(bitsPerPixelPalette).to.eql(8);
-    expect(bitsPerPixelNonPalette).to.eql(24);
-  });
-
-  // it('should check for errors on transform name', () => {
-  //
-  // })
-});
+const transformer = require('../lib/transformer');
 
 describe('the transformer', function() {
+  var randomPixelRed = (getRandomInt(1, 100) * 3 - 1);
+  var randomPixelBlue = (getRandomInt(1, 100) * 3 - 3);
+  var randomPixelGreen = (getRandomInt(1, 333) * 3 - 2);
   it('should read red from the file', function() {
     transformer.read(nonPalette, function(err, data) {
-      transformer.transform(data[54], bitmap.start, 'red').to.eql(255);
+      transformer.transform(data, data.readUInt16LE(10) + randomPixelRed, 'red').to.eql(255);
     });
   });
   it('should read green from the file', function() {
     transformer.read(nonPalette, function(err, data){
-      tranformer.transform(data[55], bitmap.start, 'green').to.eql(255);
+      transformer.transform(data, data.readUInt16LE(10) + randomPixelGreen, 'green').to.eql(255);
     });
   });
   it('should read blue from the file', function() {
     transformer.read(nonPalette, function(err, data) {
-      transformer.transform(data[56], bitmap.start, 'blue').to.eql(255);
+      transformer.transform(data, data.readUInt16LE(10) + randomPixelBlue, 'blue').to.eql(255);
     });
   });
-})
+});
+
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
