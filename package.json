@@ -1,7 +1,7 @@
 {
   "name": "Bitmap-Transformer",
   "version": "1.0.0",
-  "description": "Transform bitmap image  By Dylan Sanders",
+  "description": "bitmap image transformer",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/dylanjsa90/Bitmap-Transformer.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Dylan Sanders and Edward Smith",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dylanjsa90/Bitmap-Transformer/issues"
