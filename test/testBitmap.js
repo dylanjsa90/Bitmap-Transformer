@@ -26,7 +26,7 @@ describe('transformer tests', function() {
 
   it('should check redscale transformation', function() {
     expect(arrayOfBuffers[0][randomPixel]).to.eql(arrayOfBuffers[0][randomPixel + 1]);
-    expect(arrayOfBuffers[1][randomPixel + 2]).to.eql(arrayOfBuffers[1][randomPixel]);
+    expect(arrayOfBuffers[1][randomPixel + 2]).to.not.eql(arrayOfBuffers[1][randomPixel + 1]);
   });
 
   it('should check the greenscale transformation', function() {
